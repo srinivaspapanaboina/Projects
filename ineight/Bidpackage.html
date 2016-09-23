@@ -1,0 +1,217 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: Arial;
+        }
+
+        .wrapper {
+            width: 99%;
+            margin: 0 0.5%;
+        }
+
+        .table {
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+            float: left;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell,
+        .table-head {
+            display: table-cell;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .table-head {
+            height: 20px;
+            font-weight: bold;
+            background: #f2f2f2;
+            color: #000;
+            padding: 10px;
+        }
+
+        .table-head,
+        .table-cell {
+            border: 1px solid #ddd;
+        }
+        /*
+        .whitebox .fa{
+            color:#50b6d0;
+
+        }
+*/
+
+        .fadefault {
+            color: #000 !important;
+        }
+
+        .whitebox {
+            margin-top: 25px;
+        }
+
+        .box-header {
+            background: #e8f6fb;
+            font-size: 19px;
+            padding: 12px 10px;
+            width: 620px;
+        }
+
+        .search {
+            float: right;
+            padding: 7px 9px;
+            width: 200px;
+            border: none;
+        }
+
+        .btn {
+            padding: 8px 25px;
+            border: 1px solid #007fbe;
+            background: #007fbe;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btnadd {
+            background: #007fbe;
+            color: #fff;
+        }
+
+        .bordernone {
+            border: none;
+            background: #f2f2f2;
+        }
+
+        nav {
+            background: #2c98cb;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav h4 {
+            margin-left: 50%;
+            font-size: 20px;
+        }
+
+        .navright {
+            float: right;
+            padding: 0 10px;
+        }
+
+        .breadcrumb ul,
+        .section ul {
+            list-style-type: none;
+            display: block;
+        }
+
+        .section li {
+            padding: 25px 25px 6px 25px !important;
+            color: #000 !important;
+        }
+
+        .section li:hover {
+            border-bottom: 1px solid #007fbe;
+        }
+
+        .breadcrumb li,
+        .section li {
+            display: inline-block;
+            color: #007fbe;
+            padding: 6px 0
+        }
+
+        .breadcrumb2 {
+            background: #e6f3f9;
+            padding: 12px;
+            color: grey;
+        }
+
+        .breadcumb2-right span {
+            float: right;
+            padding: 0px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <label style="float:left; font-size:18px;">Menu</label>
+            <h4>HD Contract  <label> <span ><i class="fa fa-cog navright" aria-hidden="true"></i>
+                </span><span><i class="fa fa-user navright" aria-hidden="true"></i></span></label></h4>
+        </nav>
+
+        <div class="container">
+            <label class="breadcrumb">
+                <ul>
+                    <li>Kiewit:</li>
+                    <li>Building:</li>
+                    <li>Midwest:</li>
+                    <li>Nebraska:</li>
+                </ul>
+            </label>
+            <div class="breadcrumb2">
+                <label><span><i class="fa fa-sort-desc" aria-hidden="true" style="font-size: 22px;
+    position: relative;
+    padding: 0px 9px;"></i></span>Fort Omaha Campus</label><span>  > Bid Packages ></span><span style="color:#000 !important;">1008 Site Pothole</span>
+                <label class="breadcumb2-right">
+                    <span><i class="fa fa-minus-circle" aria-hidden="true" style="opacity:0.5;"></i></span> <span><i class="fa fa-pencil-square-o" aria-hidden="true" style="opacity:0.5;"></i></span><span><i class="fa fa-plus-circle" aria-hidden="true" style="color:#007fbe"></i></span>
+                </label>
+            </div>
+            <div class="section">
+
+                <ul>
+                    <li>OVERVIEW</li>
+                    <li>MILESTONES</li>
+                    <li>WBS</li>
+                    <li style="float:right;">
+                        <button type="button" class="btn">Convert to contract</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="table">
+            <div class="table-row">
+                <div class="table-head"><span><i class="fa fa-square-o" aria-hidden="true"></i></span></div>
+                <div class="table-head">WBS<span><i class="fa fa-sort-desc" aria-hidden="true" style="float:right;font-size: 22px;position: relative;margin-top: -5px;
+    color: #000!important;"></i></span></div>
+                <div class="table-head">Descreption<span><i class="fa fa-sort-desc" aria-hidden="true" style="float:right;font-size: 22px;position: relative;margin-top: -5px;
+    color: #000!important;"></i></span></div>
+                <div class="table-head">Status<span><i class="fa fa-sort-desc" aria-hidden="true" style="float:right;font-size: 22px;position: relative;margin-top: -5px;
+    color: #000!important;"></i></span></div>
+                <div class="table-head"><span class="facolumnicon"><i class="fa fa-columns fadefault" aria-hidden="true"></i></span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+                <div class="table-cell">10127.1123</div>
+                <div class="table-cell">Descreption</div>
+                <div class="table-cell">Open</div>
+                <div class="table-cell bordernone"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
