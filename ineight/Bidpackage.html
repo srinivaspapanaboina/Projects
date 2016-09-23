@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <script src="./jquery/js/jquery.min.js"></script>
+
     <style>
         * {
             margin: 0;
@@ -51,33 +53,9 @@
         .table-cell {
             border: 1px solid #ddd;
         }
-        /*
-        .whitebox .fa{
-            color:#50b6d0;
-
-        }
-*/
 
         .fadefault {
             color: #000 !important;
-        }
-
-        .whitebox {
-            margin-top: 25px;
-        }
-
-        .box-header {
-            background: #e8f6fb;
-            font-size: 19px;
-            padding: 12px 10px;
-            width: 620px;
-        }
-
-        .search {
-            float: right;
-            padding: 7px 9px;
-            width: 200px;
-            border: none;
         }
 
         .btn {
@@ -88,11 +66,6 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-        }
-
-        .btnadd {
-            background: #007fbe;
-            color: #fff;
         }
 
         .bordernone {
@@ -131,6 +104,10 @@
             border-bottom: 2px solid #007fbe;
         }
 
+        .section li:last-child {
+            border-bottom: none !important;
+        }
+
         .breadcrumb li,
         .section li {
             display: inline-block;
@@ -148,6 +125,122 @@
             float: right;
             padding: 0px 12px;
         }
+        /*        --- Modal Window -----*/
+
+        .modal {
+            width: 800px;
+            display: none;
+            position: absolute;
+            margin: 0 auto;
+            left: 25%;
+            top: 2%;
+            background: #fff;
+        }
+
+        .modal .table {
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+            float: left;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell,
+        .table-head {
+            display: table-cell;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .table-head {
+            height: 20px;
+            font-weight: bold;
+            background: #f2f2f2;
+            color: #000;
+            padding: 10px;
+        }
+
+        .table-head,
+        .table-cell {
+            border: 1px solid #ddd;
+        }
+        /*
+        .whitebox .fa{
+            color:#50b6d0;
+
+        }
+*/
+
+        .fadefault {
+            color: #000 !important;
+        }
+
+        .modal .whitebox {
+            margin-top: 25px;
+        }
+
+        .modal .box-header,
+        .selected .box-header {
+            background: #e8f6fb;
+            font-size: 19px;
+            padding: 12px 10px;
+            width: 620px;
+        }
+
+        .modal .search {
+            float: right;
+            padding: 7px 9px;
+            width: 200px;
+            border: none;
+        }
+
+        .modal {
+            width: 640px;
+            margin-top: 49px;
+            height: 271px;
+            margin: 0 auto;
+        }
+
+        .modal .searchicon {
+            float: right;
+            position: absolute;
+            margin-left: 411px;
+            padding: 5px 3px;
+        }
+
+        .modal ul {
+            float: right;
+        }
+
+        .modal ul li {
+            list-style-type: : none;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .btncancel {
+            color: #007fbe;
+            border: 1px solid #007fbe;
+            background: #fff;
+        }
+
+        .btnadd {
+            background: #007fbe;
+            color: #fff;
+        }
+
+        .modal .fa-plus-circle {
+            color: #007fbe !important;
+        }
+
+        .bordernone {
+            border: none;
+            background: #f2f2f2;
+        }
+        /*        --- Modal Window End ---*/
     </style>
 </head>
 
@@ -173,7 +266,7 @@
     position: relative;
     padding: 0px 9px;"></i></span>Fort Omaha Campus</label><span>  > Bid Packages ></span><span style="color:#000 !important;">1008 Site Pothole</span>
                 <label class="breadcumb2-right">
-                    <span><i class="fa fa-minus-circle" aria-hidden="true" style="opacity:0.5;"></i></span> <span><i class="fa fa-pencil-square-o" aria-hidden="true" style="opacity:0.5;"></i></span><span><i class="fa fa-plus-circle" aria-hidden="true" style="color:#007fbe"></i></span>
+                    <span><i class="fa fa-minus-circle" aria-hidden="true" style="opacity:0.5;"></i></span> <span><i class="fa fa-pencil-square-o" aria-hidden="true" style="opacity:0.5;"></i></span><span><i class="fa fa-plus-circle addwbs" aria-hidden="true" style="color:#007fbe"></i></span>
                 </label>
             </div>
             <div class="section">
@@ -210,7 +303,107 @@
             </div>
         </div>
 
-    </div>
+
+        <!--        --- Modal Window ----->
+        <div class="modal" style="border:2px solid black; height:91vh; padding:10px;">
+            <label style="display: inline-block;
+    padding: 8px;
+    font-size: 18px;">Add WBS</label><span class="close-x" style="float: right;
+    position: relative;
+    padding: 10px;
+    color: #000;
+    cursor: pointer;">X</span>
+
+            <div class="modal-content">
+                <div class="whitebox available">
+                    <div class="box-content">
+                        <div class="box-header">
+                            <div>Available WBS Items
+                                <span class="searchicon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                <input type="text" placeholder="Search.." / style="float:right;" class="search" />
+                            </div>
+
+                        </div>
+
+                        <div class="table" style="margin-bottom:15px;">
+                            <div class="table-row">
+                                <div class="table-head"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span></div>
+                                <div class="table-head">WBS<span><i class="fa fa-sort-desc" aria-hidden="true" style="float:right;font-size: 22px;position: relative;margin-top: -5px;
+    color: #000!important;"></i></span></div>
+                                <div class="table-head">Descreption<span><i class="fa fa-sort-desc" aria-hidden="true" style="float:right;font-size: 22px;position: relative;margin-top: -5px;
+    color: #000!important;"></i></span></div>
+                                <div class="table-head">Status<span><i class="fa fa-sort-desc" aria-hidden="true" style="float:right;font-size: 22px;position: relative;margin-top: -5px;
+    color: #000!important;"></i></span></div>
+                                <div class="table-head"><span class="facolumnicon"><i class="fa fa-columns fadefault" aria-hidden="true"></i></span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span></div>
+                                <div class="table-cell">10127.1123</div>
+                                <div class="table-cell">Descreption</div>
+                                <div class="table-cell">Open</div>
+                                <div class="table-cell bordernone"></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span></div>
+                                <div class="table-cell">10127.1123</div>
+                                <div class="table-cell">Descreption</div>
+                                <div class="table-cell">Open</div>
+                                <div class="table-cell bordernone"></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span></div>
+                                <div class="table-cell">10127.1123</div>
+                                <div class="table-cell">Descreption</div>
+                                <div class="table-cell">Open</div>
+                                <div class="table-cell bordernone"></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span></div>
+                                <div class="table-cell">10127.1123</div>
+                                <div class="table-cell">Descreption</div>
+                                <div class="table-cell">Open</div>
+                                <div class="table-cell bordernone"></div>
+                            </div>
+                            <br/>
+                        </div>
+                        <div class="selected">
+                            <div class="box-header" style="clear:both;">Selected WBS Items</div>
+                            <textarea rows="15" cols="103"></textarea>
+                            <ul>
+                                <li>
+                                    <button type="button" class="btn btncancel">Cancel</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btnadd">Add</button>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            $(document).ready(function () {
+                $(".addwbs").css("cursor", "pointer");
+                $(".addwbs").click(function () {
+                    $(".modal").slideDown();
+                });
+                $(".close-x").click(function () {
+                    $(".modal").hide();
+
+                });
+
+
+            });
+        </script>
+
+
+
+
+
 
 </body>
 
