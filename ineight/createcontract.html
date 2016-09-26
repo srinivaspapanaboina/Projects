@@ -168,6 +168,7 @@
             height: 350px;
             display: none;
             background: #fff;
+            z-index: 99999;
         }
 
         .selectsupplier-modal .table {
@@ -232,6 +233,7 @@
 
         .selectsupplier-modal .selected {
             margin-top: 20px;
+
         }
 
         .selectsupplier-modal ul {
@@ -290,14 +292,63 @@
             display: block;
         }
 
-        .contract-details li input[type="text"],
-        select {
+        .contract-details li input[type="text"] {
             width: 100%;
             padding: 10px;
         }
 
+        .contract-details li select {
+            width: 511px;
+            padding: 10px;
+             cursor: pointer;
+        }
+
         .contract-details ul li:nth-child(even) {
             margin-left: 5%;
+        }
+
+        .selectstest {
+            position: absolute;
+            margin: -28px 488px;
+
+        }
+        /*    ------------------ Media Quries --------------------*/
+
+        @media(max-width:1024px) {
+            .selectstest {
+                position: absolute;
+                margin: -28px 458px;
+            }
+            .contract-details li select {
+                width: 478px;
+                padding: 10px;
+            }
+            .section li {
+                padding: 18px 1px!important;
+                color: #000 !important;
+                text-align: center;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .table-contract {
+                display: table;
+                width: 100%;
+                margin: 0 auto;
+                float: left;
+            }
+            .contract-details ul {
+                display: block;
+                list-style-type: none;
+                width: 100%;
+            }
+            .contract-comments {
+                width: 99.3% !important;
+                height: 150px;
+                margin-bottom: 30px;
+            }
+            .contract-details ul li:nth-child(even) {
+                margin-left: 7%;
+            }
         }
     </style>
 </head>
@@ -334,7 +385,7 @@
                     <li>PROGRESS MEETING</li>
                     <li>CLOSEOUT</li>
                 </ul>
-            </div>
+            </div><br/>
             <div class="table table-contract">
                 <div class="table-row">
                     <div class="table-head">Original Value </div>
@@ -462,7 +513,6 @@
                     </li>
                 </ul>
             </div>
-
             <div class="contract-details">
                 <label>Details</label>
                 <div class="contract-details-content">
@@ -478,63 +528,48 @@
                         <li>
                             <label for="scope">Contract Scope
                                 <br/>
-                                <input type="text" id="scope">
-                            </label>
+                                <input type="text" id="scope"> </label>
                         </li>
                         <li>
                             <label for="bid">Bid Package Type
                                 <br/>
-                                <input type="text" id="bid">
-                            </label>
+                                <input type="text" id="bid"> </label>
                         </li>
                         <li>
-                            <label for="test">xxxxx
+                            <label for="test">
                                 <br/>
-
-                                <input type="text" id="test"><span class="" style="font-size:20px; position:absolute; margin-left:435px; margin-top:-30px; cursor:pointer;"><i class="fa fa-bars selectstest" aria-hidden="true"></i></span>
-
-                            </label>
+                                <input type="text" id="test"><span><i class="fa fa-bars selectstest" aria-hidden="true"></i></span> </label>
                         </li>
                         <li>
                             <label for="contractno">Contract Number
                                 <br/>
-                                <input type="text" id="contractno" value="4400012345">
-                            </label>
+                                <input type="text" id="contractno" value="4400012345"> </label>
                         </li>
                         <li>
                             <label for="status">Contract Approval Status(Ariba)
                                 <br/>
-                                <input type="text" id="status" value="Draft">
-                            </label>
+                                <input type="text" id="status" value="Draft"> </label>
                         </li>
                         <li>
                             <label for="effectdate">Effective Date
                                 <br/>
-                                <input type="text" id="effectdate">
-                            </label>
+                                <input type="text" id="effectdate"> </label>
                         </li>
                         <li>
                             <label for="storageloc">Storage Location
                                 <br/>
-                                <select id="storageloc" style="height:50px;">
+                                <select id="storageloc">
                                     <option>0001-MesaZoo Loc1</option>
                                 </select>
                             </label>
                         </li>
                     </ul>
                     <div>
-
                         <label>Comments
-                            <br/>
-                        </label>
-                        <textarea style="width:76% !important; height:150px;margin-bottom:30px;"></textarea>
-
-
+                            <br/> </label>
+                        <textarea style="width:74.5%; height:150px;margin-bottom:30px;" class="contract-comments"></textarea>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
         <footer>
@@ -546,7 +581,6 @@
             $(".selectsupplier").click(function () {
                 $(".selectsupplier-modal").slideDown();
             });
-
             $(".close-x, .btncancel").click(function () {
                 $(".selectsupplier-modal").hide();
             });
