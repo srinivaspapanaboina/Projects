@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="http://demos.telerik.com/kendo-ui/styling/index">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.mobile.min.css" />
+
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+   <style>
+            .fieldlist {
+                margin: 0 0 -2em;
+                padding: 0;
+            }
+.k-text{
+  line-height:30px;
+
+}
+          .fieldlist select{
+                width: 300px;
+    padding: 8px;
+          }
+          .fieldlist li:nth-child(even){
+            margin-left:40px;
+
+          }
+            .fieldlist li {
+                list-style: none;
+               padding-bottom:40px;
+              display:inline-block;
+            }
+
+            .fieldlist label {
+                display: block;
+                padding-bottom:10px;
+                font-size: 12px;
+              Font-Family: Roboto Light;
+              Color: #333333;
+             text-align: left;
+            }
+          .k-button{
+            padding:10px 20px;
+          }
+   h4{
+     Font-Family: Roboto Light;
+     font-size: 24px !important;
+    color: #333333;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 10px;
+
+     }
+
+        </style>
+</head>
+<body>
+<div id="example">
+
+    <div class="demo-section k-content" style="width:655px;padding-top:10px;">
+      <div style="float:right;">
+      <a type="button" class="k-button" style="background:none; border:1px solid #000; border-radius:5px;">cancel</a>  <a type="button" class="k-button" style="background:#00b44e; color:#fff; border-radius:5px;">Save</a>
+      </div>
+            <h4>Bid Package Details</h4>
+
+        <ul class="fieldlist">
+          <li>
+            <label class="k-label"><span>*</span>Description</label>
+                          <input id="simple-input" type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label"><span>*</span>Type</label>
+            <Select style="width:300px;">
+              <option>Select one</option>
+              </select>
+                      </li>
+          <li>
+            <label class="k-label">Spec</label>
+                          <input type="text" class="k-text" style="width:300px;">
+                                  </li>
+
+          <li>
+            <label class="k-label">Risk</label>
+            <Select style="width:300px;">
+              <option>Select one</option>
+              </select>
+                      </li>
+          <li>
+            <label class="k-label">Account code</label>
+                          <input type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label">Vendor</label>
+                          <input type="text" class="k-text" style="width:300px;">
+                      </li>
+        </ul>
+
+    </div>
+
+  <div class="demo-section k-content" style="width:655px;padding-top:60px;">
+                  <h4>Division of responsibilities(DOR)</h4>
+
+        <ul class="fieldlist">
+          <li>
+            <label class="k-label">Responsible engineer</label>
+                          <input id="simple-input" type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label">Contract Manager</label>
+            <input id="simple-input" type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label">Purchasing manager</label>
+                          <input type="text" class="k-text" style="width:300px;">
+                                  </li>
+
+          <li>
+            <label class="k-label">Field handler</label>
+            <input id="simple-input" type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label">Purchasing agent</label>
+                          <input type="text" class="k-text" style="width:300px;">
+                      </li>
+                  </ul>
+
+    </div>
+
+  <div class="demo-section k-content" style="width:655px;padding-top:60px;">
+                  <h4>Budget</h4>
+
+        <ul class="fieldlist">
+          <li>
+            <label class="k-label">Original base value</label>
+                          <input id="simple-input" type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label">Contingency in estimate</label>
+            <input id="simple-input" type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label">un-awarded adjustment</label>
+                          <input type="text" class="k-text" style="width:300px;">
+                                  </li>
+
+          <li>
+            <label class="k-label">Total estimate</label>
+            <input id="simple-input" type="text" class="k-text" style="width:300px;">
+                      </li>
+          <li>
+            <label class="k-label">Purchasing agent</label>
+                          <input type="text" class="k-text" style="width:300px;">
+                      </li>
+                  </ul>
+      <div style="float:right;">
+      <a type="button" class="k-button" style="background:none; border:1px solid #000; border-radius:5px;">cancel</a>  <a type="button" class="k-button" style="background:#00b44e; color:#fff; border-radius:5px;">Save</a>
+      </div>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
