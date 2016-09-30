@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="http://demos.telerik.com/kendo-ui/styling/index">
+    <title></title>
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.mobile.min.css" />
+
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+
+    <style>
+       /******* Add Bid Package CSS  ********/
+
+body{
+     font-family: 'Roboto Light', "Roboto";
+}
+.in8-form-section {
+            width: 650px;
+        }
+        
+        .in8-form-section h4 {
+            font-size: 24px;
+            color: #333333;
+            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333333;
+        }
+        
+        .in8-form-row {
+            width: 100%;
+            float: left;
+        }
+        
+        .in8-form-group {
+            float: left;
+            width: 50%;
+            height: 87px;
+            font-size: 12px;
+            font-family: 'Roboto Light', "Roboto";
+        }
+        
+        .in8-form-group label {
+            width: 100%;
+            margin-bottom: 5px;
+            float: left;
+        }
+        
+        .in8-form-group input[type="text"] {
+            width: 300px;
+            height: 30px;
+        }
+        
+        .lblhint {
+            color: #e2e4e8;
+            font-size: 10px;
+            padding: 2px;
+        }
+        
+        .form-rightbtns {
+            display: block;
+            float: right;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full-width">
+        <div class="in8-form">
+            <div class="in8-form-section">
+
+                <div class="form-add-bid-package">
+                    <div class="form-rightbtns">
+                        <a type="button" class="k-button btncancel">cancel</a> <a type="button" class="k-button btnsave">Save</a>
+                    </div>
+                    <br>
+                    <h4>Bid Package details</h4>
+
+                    <div class="in8-form-row">
+                        <div class="in8-form-group">
+                            <label for="description"><span>*<span>Description</label>
+			<input type="text", class="k-text" id="description"/>
+          </div>
+		  <div class="in8-form-group">
+            <label for="type"><span>*<span>Type</label>
+			<input type="text", class="k-text" id="type"/>
+          </div>
+         </div>
+		 <div class="in8-form-row">
+        <div class="in8-form-group">
+            <label for="spec">Spec</label>
+			<input type="text", class="k-text" id="description"/>
+			<label class="lblhint">Hint: Type a spec ID or description</label>
+          </div>
+		  <div class="in8-form-group">
+            <label for="risk">Risk</label>
+			<input type="text", class="k-text" id="risk"/>
+          </div>
+         </div>
+		 <div class="in8-form-row">
+        <div class="in8-form-group">
+            <label for="accountcode">Account code</label>
+			<input type="text", class="k-text" id="description"/>
+			<label class="lblhint">Hint: Type "123"</label>
+          </div>
+		  <div class="in8-form-group">
+            <label for="vendor">Vendor</label>
+			<input type="text", class="k-text" id="risk"/>
+			<label class="lblhint">Hint: Type the vendor name or ID</label>
+          </div>
+         </div>
+		  <div class="in8-form-row">
+       	  <div class="in8-form-group">
+            <label for="contract">Contract</label>
+			<label>None</label>
+          </div>
+         </div>
+	
+        </div>
+		
+		<div class="form-dor">
+
+	<h4>Division of responsibilities (DOR)</h4>
+	
+        <div class="in8-form-row">
+        <div class="in8-form-group">
+            <label for="responsibleengineer">Responsibile engineer</label>
+			<input type="text", class="k-text" id="responsibleengineer"/>
+			<label class="lblhint">Hint: Type "John"</label>
+          </div>
+		  <div class="in8-form-group">
+            <label for="conractmanager">Contract Manager</label>
+			<input type="text", class="k-text" id="conractmanager"/>
+			<label class="lblhint">Hint: Type "John"</label>
+          </div>
+         </div>
+		 <div class="in8-form-row">
+        <div class="in8-form-group">
+            <label for="purchsingmanager">Purchasing manager</label>
+			<input type="text", class="k-text" id="purchasingmanager"/>
+			<label class="lblhint">Hint: Type "John"</label>
+          </div>
+		  <div class="in8-form-group">
+            <label for="fieldhandler">Field handler</label>
+			<input type="text", class="k-text" id="fieldhandler"/>
+			<label class="lblhint">Hint: Type "John"</label>
+          </div>
+         </div>
+		 <div class="in8-form-row">
+        <div class="in8-form-group">
+            <label for="purchasingagent">Purchasing agent</label>
+			<input type="text", class="k-text" id="description"/>
+			<label class="lblhint">Hint: Type "John"</label>
+          </div>
+		  
+         </div>
+        </div>
+		
+		
+		<div class="form-budget">
+
+	<h4>Budget</h4>
+	
+        <div class="in8-form-row">
+        <div class="in8-form-group">
+            <label for="originalbasevalue">Original base value</label>
+			<input type="text", class="k-text" id="originalbasevalue"/>
+			          </div>
+		  <div class="in8-form-group">
+            <label for="Contingencyinestimate">Contingency in estimate</label>
+			<input type="text", class="k-text" id="contingencyinestimate"/>
+			</div>
+         </div>
+		 <div class="in8-form-row">
+        <div class="in8-form-group">
+            <label for="unawardedadjustment">Un-awarded adjustment</label>
+			<input type="text", class="k-text" id="unawardedadjustment"/>
+			          </div>
+		  <div class="in8-form-group">
+            <label for="totalestimate">Total estimate</label>
+			<input type="text", class="k-text" id="totalestimate"/>
+			
+          </div>
+         </div>
+		 <div class="form-rightbtns">
+            <a type="button" class="k-button btncancel">cancel</a> <a type="button" class="k-button btnsave">Save</a>
+        </div>
+		     </div>
+	
+        </div>
+  
+    
+    </div>
+    
+    </div>
+    
+
+
+
+</body>
+
+</html>
