@@ -5,56 +5,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-   
     <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.common-material.min.css" />
     <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.min.css" />
     <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.mobile.min.css" />
     <script src="//kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
     <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
     <script src="./jquery/js/jquery.min.js"></script>
+
     <style>
 /*        *** Add WBS CSS ****/
-        
+
+
         .form-dialog-head {
             padding: 5px;
             display: block;
         }
-        
+
         .form-dialog-inner {
             padding: 5px 22px;
         }
-        
+
         .form-dialog-contenthead {
             display: block;
             background: #e8f6fb;
             padding: 10px 5px;
-          
+
         }
         .Addwbs{width:500px;    height: 518px;
               border:1px solid #CCC;
-            
+
         }
-        
+
         input#icon-right {
             height: 25px !important;
         }
-        
+
         .inputsearch-right {
             position: relative;
             float: right;
             margin-top: -7px;
         }
-        
+
         .k-button {
             padding: 10px 20px;
             border-radius: 5px;
             text-align: center;
             Font-Family: Roboto Regular;
             font-size: 14px;
-            margin-top:20px;
-            
-        }
-        
+          border: 1px solid #0080bc;
+			margin:10px;
+               }
+
        .primary-bluebtn  {
             background: #0080bc;
             color: #fff;
@@ -63,18 +64,28 @@
             background:#3399C9;
             color:#fff;
         }
-        .secondary-cancelbtn {
+        .secondarybtn {
             background: #fff;
             color: #0080bc;
         }
-        .secondary-cancelbtn:hover {
-            background: #fff;
-            color:#0080bc;
-	
+        .secondarybtn:hover {
+            background: #4d585a;
+            color:#fff;
+
 }
-        .form-dialog-footer button:nth-child(even){
-            margin-left:20px;
-        }
+.cancelbtn{
+background:#fff;
+color:#4d585a;
+border:1px solid #4d585a;
+}
+.cancelbtn:hover{
+			background:#4d585a;
+			color:#fff;
+			border:1px solid #4d585a;
+			
+		}
+      
+
     </style>
 </head>
 
@@ -98,14 +109,14 @@
                 </div>
             </div>
             <div class="form-dialog-footer" style="float:right;">
-                  <button class="k-button secondary-cancelbtn">Cancel</button>
+                  <button class="k-button secondarybtn cancelbtn">Cancel</button>
                   <button class="k-button primary-bluebtn">Add</button>
-            
-            
-            
+
+
+
             </div>
-              
-                
+
+
         </div>
     </div>
 </body>
