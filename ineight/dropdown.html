@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.rtl.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.silver.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.mobile.all.min.css" />
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.3.914/js/angular.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+
+            <style>
+            .dropdown-header {
+                    font-size: 1.2em;
+                }
+
+      #customers-list .dropdown-header > span {
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                        text-align: left;
+                        display: inline-block;
+                        border-style: solid;
+                        border-width: 0 0 1px 1px;
+                        padding: .3em .6em;
+                        width: 72%;
+                    }
+
+ #customers-list .dropdown-header  > span:first-child {
+                            width: 82px;
+                            border-left-width: 0;
+                        }
+
+#customers-list  .selected-value {
+                    float: left;
+                    width: 10px;
+                    margin: 0 4px;
+                }
+
+                #customers-list .k-item > span {
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    border-style: solid;
+                    border-width: 0 0 1px 1px;
+                    vertical-align: top;
+                    min-height: 45px;
+                    width: 71%;
+                    padding: .6em 0 0 .6em;
+					background:#fff;
+                }
+
+                    #customers-list .k-item > span:first-child {
+                        width: 29%;
+                        border-left-width: 0;
+                        padding: .6em 0 0 0;
+                    }
+
+                #customers-list p {
+                    margin: 0;
+                    padding: 0;
+                }
+				.k-list{
+				width:100%;}
+
+                 /*///// input controls -- autocomplete /////*/
+
+.k-autocomplete{border-radius:0;border:none;}
+.k-autocomplete.k-state-border-down{box-shadow:none;border-radius:0;}
+.k-state-border-down.k-autocomplete .k-input,
+.k-autocomplete .k-input{border-radius:0;}
+.k-autocomplete.k-state-default{background-color:#fff;}
+.k-autocomplete.k-state-default .k-input{border:1px solid #999; box-shadow:none;}
+.k-autocomplete.k-state-focused .k-input{border:1px solid #0080BC; box-shadow:none;}
+
+/*///// end input controls -- autocomplete /////*/
+                #customer-list ul{
+                    width:100px !important;
+
+                }
+            </style>
+</head>
+<body>
+
+    <div id="example" ng-app="KendoDemos">
+        <div class="demo-section k-content" ng-controller="MyCtrl">
+            <div class="custom-autocomplete">
+                <input id="customers" kendo-auto-complete style="width:300px" k-options="customOptions" />
+            </div>
+			<div>
+
+			</div>
+
+        </div>
+    </div>
+
+    <script>
+      angular.module("KendoDemos", [ "kendo.directives" ]).controller('MyCtrl',
+      function MyCtrl($scope) {
+          $scope.countries = [
+          { code: '5674', name: 'Acme' },
+          { code: '4563', name: 'Acme Concrete' },
+          { code: '2378', name: 'Acme Incorporated' },
+          { code: '6784', name: 'Acme Electric' },
+          { code: '4876', name: 'AndorrA' },
+          { code: '8876', name: 'Acme Plumbing' },
+          { code: '5543', name: 'Acme Interior' },
+          { code: '5532', name: 'Antarctica' },
+          { code: '7659', name: 'Acme Flooring' },
+          { code: '8854', name: 'Acme Painting' },
+          { code: '4453', name: 'Acme Cleaning' }
+
+          ];
+          $scope.country = '';
+          $scope.customOptions =
+              {
+                  dataTextField: "selectedname",
+                  filter: "contains",
+            dataSource: {
+                data: $scope.countries,
+                schema: {
+                    parse: function (response) {
+                        debugger
+                        var length = response.length;
+                        var dataItem;
+                        var idx = 0;
+
+                        for (; idx < length; idx++) {
+                            dataItem = response[idx];
+                            dataItem.selectedname = dataItem.code + "-" + dataItem.name;
+                        }
+
+                        return response;
+                    }
+                }
+
+            },
+
+
+          headerTemplate: '<div class="dropdown-header">' +
+          '<span class="k-widget k-header">Id</span>' +
+          '<span class="k-widget k-header">Name</span>' +
+          '</div>',
+
+          // using  templates:
+          template: '<span class="k-state-default">#: code#</span>' +
+          '<span class="k-state-default">#: name#</span>',
+        };
+      });
+    </script>
+
+</body>
+</html>

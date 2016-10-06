@@ -4,6 +4,180 @@ margin:0;
 padding:0;
 }
 
+ /* -----Global  Section------ */
+
+  /*///// in8 titles /////*/
+
+        .in8-title-2,
+        .in8-title-3,
+        .in8-title-4,
+        .in8-title-5,
+        .in8-title-6,
+        .in8-title-7 {
+            font-family: 'Roboto Light', 'Roboto';
+            font-weight: 200;
+            color: #333 !important;
+        }
+
+        .in8-title-2 {
+            font-size: 24px;
+        }
+
+        .in8-title-3 {
+            font-size: 22px;
+        }
+
+        .in8-title-4 {
+            font-size: 20px;
+        }
+
+        .in8-title-5 {
+            font-size: 18px;
+        }
+
+        .in8-title-6 {
+            font-size: 16px;
+        }
+
+        .in8-title-7 {
+            font-size: 14px;
+        }
+        /*/////End in8 titles /////*/
+
+        /*   --------- in8-wizards --------*/
+
+        .in8-wizard {
+            width: auto;
+            float: left;
+        }
+
+        .in8-wizard-inner {
+            width: auto;
+            float: left;
+            margin: 25px 50px 25px 50px;
+        }
+
+        .grid-Addwbs {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .selected-wbs-items textarea {
+            width: 644px;
+            height: 100px;
+        }
+
+        .in8-wizard-header,
+        .in8-wizard-content,
+        .in8-wizard-footer {
+            width: 100%;
+            float: left;
+        }
+
+        /*in8-wizard-header section */
+
+        .in8-wizard-header-title {
+            width: 100%;
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        .in8-wizard-header-title .in8-title-6 {
+            font-family: 'Roboto';
+        }
+        /*in8-wizard-action bar section */
+
+        .in8-wizard-header-actionbar {
+            width: 100%;
+            float: left;
+            height: 40px;
+            padding: 0 0 12px 6px;
+            background-color: #CCE6F2;
+            margin-bottom: 20px;
+        }
+        /*footer section */
+
+        .in8-wizard-footer {
+            margin-bottom: 10px;
+            text-align: right;
+        }
+
+/* ------kendo css overwrite section-----*/
+
+        .k-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            Font-Family: Roboto Regular;
+            font-size: 14px;
+            border: 1px solid #0080bc;
+            margin: 10px;
+        }
+
+       /*///// input controls -- autocomplete /////*/
+
+.k-autocomplete{border-radius:0;border:none;}
+.k-autocomplete.k-state-border-down{box-shadow:none;border-radius:0;}
+.k-state-border-down.k-autocomplete .k-input,
+.k-autocomplete .k-input{border-radius:0;}
+.k-autocomplete.k-state-default{background-color:#fff;}
+.k-autocomplete.k-state-default .k-input{border:1px solid #999; box-shadow:none;}
+.k-autocomplete.k-state-focused .k-input{border:1px solid #0080BC; box-shadow:none;}
+
+/*///// end input controls -- autocomplete /////*/
+	/* ------in8-Buttons section----- */
+	 .primary-bluebtn {
+            background: #0080bc;
+            color: #fff;
+        }
+
+        .primary-bluebtn:hover {
+            background: #3399C9;
+            color: #fff;
+        }
+
+        .secondarybtn {
+            background: #fff;
+            color: #0080bc;
+        }
+
+        .secondarybtn:hover {
+            background: #4d585a;
+            color: #fff;
+        }
+
+        .cancelbtn {
+            background: #fff;
+            color: #4d585a;
+            border: 1px solid #4d585a;
+        }
+
+        .cancelbtn:hover {
+            background: #4d585a;
+            color: #fff;
+            border: 1px solid #4d585a;
+        }
+
+
+
+		 /* ------ input-search with icon ------*/
+
+        .k-inputsearch {
+            width: 240px !important;
+            float: right;
+            margin-top: 4px;
+        }
+
+        .in8-title-inline-block {
+            display: inline-block;
+        }
+
+        .inputsearch {
+            height: 30px;
+        }
+		/*------ end input-search with icon ------*/
+
+
 /*--------// Project Status CSS //---------*/
   .Project-status {width: 100%;background: #f2f2f2;min-height: 90px;}
         .Project-status ul{float:left; width:100%; height:60px; min-width:400px;}
@@ -12,10 +186,64 @@ padding:0;
         .Project-status ul li label:nth-child(2){color:#0181bd; font-size:28px; margin-bottom: 5px; text-align: left; display: block}
         .Project-status ul li:nth-child(2){border-right:1px solid #dedede}
 
+
+
+ /*Bottom breadcrumb or breadcrumb actions*/
+.in8-breadcrumb-actions {
+    height: 48px;
+    border-bottom: 2px solid #ccc;
+    background-color:#fff;
+}
+.full-width {width: 100%;float: left;}/* Full width of any element */
+        .in8-action-list-section ul.in8-action-list-tab li{
+    display:none;
+}
+.in8-action-list-section ul.in8-action-list-tab li:first-child {
+    display: inline-block;}
+/*Action list or tabs*/
+.in8-action-list-section {
+    width:550px;
+    float:left;
+    margin-top: 0;
+    padding:0;
+}
+.in8-action-list-section-slider{
+    position:absolute;
+    bottom:0;
+    height:4px;
+    background-color:#0080bc;
+    display:block;
+   -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    left:0;
+}
+.in8-action-list-section ul.in8-action-list-tab {
+    width:100%;
+    float:left;
+    margin:0;
+    padding:0;
+    position:relative;
+}
+.in8-action-list-section ul.in8-action-list-tab li {
+    display:inline-block;
+    list-style:none;
+    float:left;
+
+}
+.in8-action-list-section ul.in8-action-list-tab li a {
+    font-size:14px;
+    float:left;
+    line-height:46px;
+    padding: 2px 15px 0;
+    margin: 0 5px 0 5px;
+     text-decoration: none;
+    text-transform:uppercase;
+}
+
 /*--------// Add Bid Package CSS //----------- */
 
 
- .in8-form {
+  .in8-form {
             width: 980px;
             height: 450px;
             overflow-x: hidden;
@@ -75,41 +303,7 @@ padding:0;
             display: block;
             float: right;
         }
-
-        .k-button {
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-            Font-Family: Roboto Regular;
-            font-size: 14px;
-            margin: 10px;
-            border: 1px solid #0080bc;
-        }
-
-        .cancelbtn {
-            background: #fff;
-            color: #4d585a;
-            border: 1px solid #4d585a;
-        }
-
-        .cancelbtn:hover {
-            background: #4d585a;
-            color: #fff;
-            border: 1px solid #4d585a;
-        }
-
-        .savebtn {
-            background: #00B44E;
-            color: #fff;
-            border: 1px solid #00B44E;
-        }
-
-        .savebtn:hover {
-            background: #33C371;
-            color: #fff;
-            border: 1px solid #33C371;
-        }
-        .in8-form-col{
+          .in8-form-col{
             width:48%;
             float:left;
                         margin-bottom:40px;
@@ -117,80 +311,26 @@ padding:0;
         .in8-form-col:nth-child(even){
             margin-left:4%;
         }
-        .in8-form-col label{
-            display: inline-block !important;
-            margin-right:30px;
-            float:left;
-            width:50%;
+        .in8-form-col:nth-child(even){
+            margin-left:4%;
         }
+
         .in8-form-col .textbox-small {
-	width:98px;
+              width: 155px;
             line-height: 25px;
-}
+           }
         .in8-form-col h4{
           border-bottom: none;
     padding-bottom: 10px;
     margin-bottom: 0;
 }
 
+ .in8-form-col .rowall { float:left; width:100%; margin-bottom:5px; clear:both}
+ .in8-form-col .rowall .col-5 { float:left;width: 45%; margin-right:2%;}
+ .in8-form-col .rowall .col-7 { float:left; width:50%; }
 
 /*        ------// Add WBS CSS //------- */
-
-        .form-dialog-head {
-            padding: 5px;
-            display: block;
+  .Addwbs-wizard {
+            width: 750px;
         }
-
-        .form-dialog-inner {
-            padding: 5px 22px;
-        }
-
-        .form-dialog-contenthead {
-            display: block;
-            background: #e8f6fb;
-            padding: 10px 5px;
-
-        }
-        .Addwbs{width:500px;    height: 518px;
-              border:1px solid #CCC;
-
-        }
-
-       #icon-right {
-            height: 25px !important;
-        }
-
-        .inputsearch-right {
-            position: relative;
-            float: right;
-            margin-top: -7px;
-        }
-
-        .k-button {
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-            Font-Family: Roboto Regular;
-            font-size: 14px;
-            border: 1px solid #0080bc;
-		 margin:10px;
-        }
-
-       .primary-bluebtn  {
-            background: #0080bc;
-            color: #fff;
-        }
-        .primary-bluebtn:hover{
-            background:#3399C9;
-            color:#fff;
-        }
-        .secondarybtn {
-            background: #fff;
-            color: #0080bc;
-        }
-        .secondarybtn:hover {
-            background: #fff;
-            color:#0080bc;
-		}
-
 

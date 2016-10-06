@@ -1,0 +1,129 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.mobile.min.css" />
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+    <script src="./jquery/js/jquery.min.js"></script>
+
+    <style>
+/*        *** Add WBS CSS ****/
+
+
+        .form-dialog-head {
+            padding: 5px;
+            display: block;
+        }
+
+        .form-dialog-inner {
+            padding: 5px 22px;
+        }
+
+        .form-dialog-contenthead {
+            display: block;
+            background: #e8f6fb;
+            padding: 10px 5px;
+
+        }
+        .Addwbs{width:500px;    height: 518px;
+              border:1px solid #CCC;
+
+        }
+
+        input#icon-right {
+            height: 25px !important;
+        }
+
+        .inputsearch-right {
+            position: relative;
+            float: right;
+            margin-top: -7px;
+        }
+
+        .k-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            Font-Family: Roboto Regular;
+            font-size: 14px;
+          border: 1px solid #0080bc;
+			margin:10px;
+               }
+
+       .primary-bluebtn  {
+            background: #0080bc;
+            color: #fff;
+        }
+        .primary-bluebtn:hover{
+            background:#3399C9;
+            color:#fff;
+        }
+        .secondarybtn {
+            background: #fff;
+            color: #0080bc;
+        }
+        .secondarybtn:hover {
+            background: #4d585a;
+            color:#fff;
+
+}
+.cancelbtn{
+background:#fff;
+color:#4d585a;
+border:1px solid #4d585a;
+}
+.cancelbtn:hover{
+			background:#4d585a;
+			color:#fff;
+			border:1px solid #4d585a;
+			
+		}
+      
+
+    </style>
+</head>
+
+<body>
+    <div class="k-window k-widget"> 
+    <div class="form-dialog Addwbs">
+        <div class="form-dialog-inner">
+            <div class="form-dialog-head">
+                <h4>Add WBS</h4> </div>
+            <div class="form-dialog-contet k-window-content">
+                <div class="form-dialog-contenthead">
+                    <label>Available WBS items</label>
+                    <div class="k-textbox k-space-right inputsearch-right">
+                        <input type="text" id="icon-right" placeholder="Search..." /> <a href="#" class="k-icon k-i-search">&nbsp;</a></div>
+                </div>
+                <div id="AvailableWBS-grid"style="height:150px; margin-bottom:30px"> </div>
+                <div>
+                    <div class="form-dialog-contenthead">
+                        <label>Selected WBS items</label>
+                    </div>
+                    <textarea style="width:450px; height:100px;"></textarea>
+                </div>
+            </div>
+            <div class="form-dialog-footer" style="float:right;">
+                  <button class="k-button secondarybtn cancelbtn">Cancel</button>
+                  <button class="k-button primary-bluebtn">Add</button>
+
+
+
+            </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+    
+    
+</body>
+
+</html>

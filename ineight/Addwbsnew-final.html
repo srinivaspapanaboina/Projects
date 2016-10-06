@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="http://demos.telerik.com/kendo-ui/styling/index#">
+    <title></title>
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.mobile.min.css" />
+
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+
+    <style>
+        /*///// in8 titles /////*/
+
+        .in8-title-2,
+        .in8-title-3,
+        .in8-title-4,
+        .in8-title-5,
+        .in8-title-6,
+        .in8-title-7 {
+            font-family: 'Roboto Light', 'Roboto';
+            font-weight: 200;
+            color: #333 !important;
+        }
+
+        .in8-title-2 {
+            font-size: 24px;
+        }
+
+        .in8-title-3 {
+            font-size: 22px;
+        }
+
+        .in8-title-4 {
+            font-size: 20px;
+        }
+
+        .in8-title-5 {
+            font-size: 18px;
+        }
+
+        .in8-title-6 {
+            font-size: 16px;
+        }
+
+        .in8-title-7 {
+            font-size: 14px;
+        }
+        /*/////End in8 titles /////*/
+
+        /*   --------- in8-wizards --------*/
+
+        .in8-wizard {
+            width: auto;
+            float: left;
+        }
+
+        .in8-wizard-inner {
+            width: auto;
+            float: left;
+            margin: 25px 50px 25px 50px;
+        }
+
+        .grid-Addwbs {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .selected-wbs-items textarea {
+            width: 644px;
+            height: 100px;
+        }
+
+        .in8-wizard-header,
+        .in8-wizard-content,
+        .in8-wizard-footer {
+            width: 100%;
+            float: left;
+        }
+
+        /*in8-wizard-header section */
+
+        .in8-wizard-header-title {
+            width: 100%;
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        .in8-wizard-header-title .in8-title-6 {
+            font-family: 'Roboto';
+        }
+        /*in8-wizard-action bar section */
+
+        .in8-wizard-header-actionbar {
+            width: 100%;
+            float: left;
+            height: 40px;
+            padding: 0 0 12px 6px;
+            background-color: #CCE6F2;
+            margin-bottom: 20px;
+        }
+        /*footer section */
+
+        .in8-wizard-footer {
+            margin-bottom: 10px;
+            text-align: right;
+        }
+
+        /*  kendo button overwrite css*/
+
+        .k-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            Font-Family: Roboto Regular;
+            font-size: 14px;
+            border: 1px solid #0080bc;
+            margin: 10px;
+        }
+
+        .primary-bluebtn {
+            background: #0080bc;
+            color: #fff;
+        }
+
+        .primary-bluebtn:hover {
+            background: #3399C9;
+            color: #fff;
+        }
+
+        .secondarybtn {
+            background: #fff;
+            color: #0080bc;
+        }
+
+        .secondarybtn:hover {
+            background: #4d585a;
+            color: #fff;
+        }
+
+        .cancelbtn {
+            background: #fff;
+            color: #4d585a;
+            border: 1px solid #4d585a;
+        }
+
+        .cancelbtn:hover {
+            background: #4d585a;
+            color: #fff;
+            border: 1px solid #4d585a;
+        }
+        /*        ------ input-search with icon ------*/
+
+        .k-inputsearch {
+            width: 240px !important;
+            float: right;
+            margin-top: 4px;
+        }
+
+        .in8-title-inline-block {
+            display: inline-block;
+        }
+
+        .inputsearch {
+            height: 30px;
+        }
+
+/*--------- AddWBS Wizard  ----------*/
+        .Addwbs-wizard {
+            width: 750px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="in8-wizard Addwbs-wizard">
+        <div class="in8-wizard-inner">
+            <div class="in8-wizard-header">
+                <div class="in8-wizard-header-title">
+                    <h3 class="in8-title-6">Add WBS</h3>
+                </div>
+                <div class="in8-wizard-header-actionbar">
+                    <h3 class="in8-tittle-6 in8-title-inline-block">Available WBS items</h3><span class="k-textbox k-space-right k-inputsearch" style="width: 100%;">
+                    <input type="text" id="icon-right" class="inputsearch"/>
+                    <a href="#" class="k-icon k-i-search">&nbsp;</a>
+                </span>
+
+                </div>
+            </div>
+            <div class="in8-wizard-content">
+                <div class="full-width">
+                    <div class="grid-block gray-block grid-Addwbs">
+                        <p>Add Grid Here</p>
+                    </div>
+                </div>
+                <div class="in8-wizard-header-actionbar">
+                <h3 class="in8-tittle-6">Selected WBS items</h3>
+            </div>
+                 <div class="full-width">
+                    <div class="selected-wbs-items">
+                        <textarea></textarea>
+                    </div>
+                </div>
+                <div class="in8-wizard-footer">
+            <button class="k-button secondarybtn cancelbtn">Cancel</button>
+            <button class="k-button primary-bluebtn">Add</button>
+        </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
